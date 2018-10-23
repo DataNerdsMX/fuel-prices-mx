@@ -1,0 +1,4 @@
+.env
+venv
+data/*.pickle
+__pycache__
