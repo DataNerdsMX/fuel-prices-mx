@@ -2,6 +2,8 @@
 
 This is a useful proof of concept of what can be done with New Relic Insights.
 
+See the [online report](https://combustibles.datanerds.mx) to explore some data available in the dashboard.
+
 ![dashboard](docs/dashboard.png "New Relic Insights Dashboard")
 
 ### How this works
