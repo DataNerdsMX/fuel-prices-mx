@@ -15,9 +15,11 @@ check_env: venv .env
 	@which python | grep `pwd` || source ./venv/bin/activate;
 
 test: check_env
+	source venv/bin/activate; \
 	source .env; \
 	pytest -vv etl.py
 
 data: check_env
+	source venv/bin/activate; \
 	source .env; \
 	python etl.py
