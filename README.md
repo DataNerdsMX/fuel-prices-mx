@@ -2,7 +2,7 @@
 
 This is a useful proof of concept of what can be done with New Relic Insights.
 
-![dashboard](dashboard.png "New Relic Insights Dashboard")
+![dashboard](docs/dashboard.png "New Relic Insights Dashboard")
 
 ### How this works
 
