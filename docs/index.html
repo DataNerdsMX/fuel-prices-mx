@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="es">
   <head>
@@ -10,7 +9,7 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col col-10 pt-2 pr-5 pb-2 pl-5">
+        <div class="col-12 col-md-8 pt-2 pr-5 pb-2 pl-5">
           <div class="media">
             <img class="mt-2 mr-4 mb-2 ml-2" src="https://www.gravatar.com/avatar/431229ff5bae3fdc239cc496f47b457f" alt="DataNerdsMX">
             <div class="media-body">
@@ -19,7 +18,7 @@
             </div>
           </div>
         </div>
-        <div class="col col-2 pt-4 align-self-center">
+        <div class="col col-6 col-md-4 pl-5 align-self-center">
           <a class="github-button" href="https://github.com/DataNerdsMX/fuel-prices-mx" data-size="large" aria-label="Star DataNerdsMX/fuel-prices-mx on GitHub">Ver en GitHub</a>
         </div>
       </div>
@@ -71,6 +70,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script>
+    function getResponsiveBreakpoint() {
+      var envs = {xs:"d-none", sm:"d-sm-none", md:"d-md-none", lg:"d-lg-none", xl:"d-xl-none"};
+      var env = "";
+      var $el = $("<div>");
+      $el.appendTo($("body"));
+      for (var i = Object.keys(envs).length - 1; i >= 0; i--) {
+        env = Object.keys(envs)[i];
+        $el.addClass(envs[env]);
+        if ($el.is(":hidden")) {
+            break;
+        }
+      }
+      $el.remove();
+      return env;
+    };
+    $(document).ready(function() {
+      if (getResponsiveBreakpoint() == 'xs') {
+        $('#myTab').removeClass('nav-tabs').addClass('nav-pills flex-column');
+        $('.tab-pane > div').height('400px');
+      }
+    });
+    </script>
   </body>
 </html>
 
